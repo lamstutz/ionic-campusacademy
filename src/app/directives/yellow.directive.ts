@@ -1,20 +1,33 @@
-import { Directive, ElementRef, HostListener, Input } from "@angular/core";
+import { Directive, ElementRef, HostListener, Input, OnInit } from "@angular/core";
 
 
 @Directive({
     selector: '[appYellow]'
 })
-export class YellowDirective {
+export class YellowDirective implements OnInit {
 
     @Input('appYellow')
     color: string;
 
-    constructor(el: ElementRef<HTMLBaseElement>) {
-        el.nativeElement.style.backgroundColor = 'yellow';
+    constructor(private el: ElementRef<HTMLBaseElement>) {
+    }
+
+    ngOnInit() {
+        this.el.nativeElement.style.backgroundColor = this.color || 'yellow';
     }
 
     @HostListener('click')
     onClick() {
-        console.log('component clicked', this.color);
+        this.el.nativeElement.style.backgroundColor = this.getRandomColor();
     }
+
+    getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
 }
