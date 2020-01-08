@@ -20,7 +20,7 @@
       </div>
       <ion-list>
         <ion-item *ngFor="let people of peoples">
-          <h1>{{people.name | uppercase}}</h1>
+          <h1 appYellow="blue">{{people.name | uppercase}}</h1>
           <h2 [ngClass]="{'green-text':people.gender === 'female','blue-text':people.gender === 'male','grey-text':people.gender === 'n/a'}">{{people.gender}}</h2>
           <p>{{people.height}} / {{people.mass}}</p>
         </ion-item>
