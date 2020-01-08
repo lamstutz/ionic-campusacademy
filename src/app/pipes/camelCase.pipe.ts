@@ -1,10 +1,8 @@
 import { PipeTransform, Pipe } from '@angular/core';
 
-@Pipe(
-    {
-        name: 'appCamelCase'
-    }
-)
+@Pipe({
+    name: 'appCamelCase'
+})
 export class CamelCasePipe implements PipeTransform {
 
     transform(str: string): string {
