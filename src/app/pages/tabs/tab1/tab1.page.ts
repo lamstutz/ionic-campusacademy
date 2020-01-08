@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CountService } from '../../../services/count.service';
 
 @Component({
   selector: 'app-tab1',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+
+  public value = this.countService.count;
 
   public myArray = [1, 2, 3, 4];
   public peoples = [
@@ -110,6 +113,13 @@ export class Tab1Page {
       gender: "male"
     }
   ];
-  constructor() { }
+  constructor(private countService: CountService) { }
 
+  increment() {
+    this.value = this.countService.increment();
+  }
+
+  decrement() {
+    this.value = this.countService.decrement();
+  }
 }

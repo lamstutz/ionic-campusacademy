@@ -1,3 +1,4 @@
+import { CountService } from './../../../services/count.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,6 +8,10 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  get value() {
+    return this.countService.count;
+  }
+
+  constructor(private countService: CountService) { }
 
 }
