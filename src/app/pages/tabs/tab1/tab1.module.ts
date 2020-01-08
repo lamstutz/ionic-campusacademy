@@ -4,8 +4,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab1Page } from './tab1.page';
-import { MyComponentComponent } from '../my-component/my-component.component';
-import { YellowDirective } from '../directives/yellow.directive';
+import { MyComponentComponent } from '../../../components/my-component/my-component.component';
+import { YellowDirective } from '../../../directives/yellow.directive';
 
 @NgModule({
   imports: [
