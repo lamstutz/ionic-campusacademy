@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+
+  public myArray = [1, 2, 3, 4];
   public peoples = [
     {
       name: "Luke Skywalker",

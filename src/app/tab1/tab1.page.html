@@ -19,55 +19,10 @@
         {{elt }} : <app-my-component></app-my-component>
       </div>
       <ion-list>
-        <ion-item>
-          <h1>{{peoples[0].name}}</h1>
-          <h2>{{peoples[0].gender}}</h2>
-          <p>{{peoples[0].height}} / {{peoples[0].mass}}</p>
-        </ion-item>
-        <ion-item>
-          <h1>{{peoples[1].name}}</h1>
-          <h2>{{peoples[1].gender}}</h2>
-          <p>{{peoples[1].height}} / {{peoples[1].mass}}</p>
-        </ion-item>
-        <ion-item>
-          <h1>{{peoples[2].name}}</h1>
-          <h2>{{peoples[2].gender}}</h2>
-          <p>{{peoples[2].height}} / {{peoples[2].mass}}</p>
-        </ion-item>
-        <ion-item>
-          <h1>{{peoples[3].name}}</h1>
-          <h2>{{peoples[3].gender}}</h2>
-          <p>{{peoples[3].height}} / {{peoples[3].mass}}</p>
-        </ion-item>
-        <ion-item>
-          <h1>{{peoples[4].name}}</h1>
-          <h2>{{peoples[4].gender}}</h2>
-          <p>{{peoples[4].height}} / {{peoples[4].mass}}</p>
-        </ion-item>
-        <ion-item>
-          <h1>{{peoples[5].name}}</h1>
-          <h2>{{peoples[5].gender}}</h2>
-          <p>{{peoples[5].height}} / {{peoples[5].mass}}</p>
-        </ion-item>
-        <ion-item>
-          <h1>{{peoples[6].name}}</h1>
-          <h2>{{peoples[6].gender}}</h2>
-          <p>{{peoples[6].height}} / {{peoples[6].mass}}</p>
-        </ion-item>
-        <ion-item>
-          <h1>{{peoples[7].name}}</h1>
-          <h2>{{peoples[7].gender}}</h2>
-          <p>{{peoples[7].height}} / {{peoples[7].mass}}</p>
-        </ion-item>
-        <ion-item>
-          <h1>{{peoples[8].name}}</h1>
-          <h2>{{peoples[8].gender}}</h2>
-          <p>{{peoples[8].height}} / {{peoples[8].mass}}</p>
-        </ion-item>
-        <ion-item>
-          <h1>{{peoples[9].name}}</h1>
-          <h2>{{peoples[9].gender}}</h2>
-          <p>{{peoples[9].height}} / {{peoples[9].mass}}</p>
+        <ion-item *ngFor="let people of peoples">
+          <h1>{{people.name}}</h1>
+          <h2 [ngClass]="{'green-text':people.gender === 'female','blue-text':people.gender === 'male','grey-text':people.gender === 'n/a'}">{{people.gender}}</h2>
+          <p>{{people.height}} / {{people.mass}}</p>
         </ion-item>
       </ion-list>
     </ion-card-content>
