@@ -1,5 +1,7 @@
 {
   "name": "ca",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

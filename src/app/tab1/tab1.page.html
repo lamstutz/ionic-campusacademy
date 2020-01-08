@@ -7,35 +7,69 @@
 </ion-header>
 
 <ion-content>
-    <ion-card class="welcome-card">
-      <img src="/assets/shapes.svg" alt="" />
-      <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list>
+  <ion-card class="welcome-card">
+    <img src="/assets/shapes.svg" alt="" />
+    <ion-card-header>
+      <ion-card-subtitle>Get Started</ion-card-subtitle>
+      <ion-card-title>Welcome to Ionic</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div *ngFor="let elt of myArray">
+        <span *ngIf="elt !== 3">pas 3</span>
+        {{elt }} : <app-my-component></app-my-component>
+      </div>
+      <ion-list>
+        <ion-item>
+          <h1>{{peoples[0].name}}</h1>
+          <h2>{{peoples[0].gender}}</h2>
+          <p>{{peoples[0].height}} / {{peoples[0].mass}}</p>
+        </ion-item>
+        <ion-item>
+          <h1>{{peoples[1].name}}</h1>
+          <h2>{{peoples[1].gender}}</h2>
+          <p>{{peoples[1].height}} / {{peoples[1].mass}}</p>
+        </ion-item>
+        <ion-item>
+          <h1>{{peoples[2].name}}</h1>
+          <h2>{{peoples[2].gender}}</h2>
+          <p>{{peoples[2].height}} / {{peoples[2].mass}}</p>
+        </ion-item>
+        <ion-item>
+          <h1>{{peoples[3].name}}</h1>
+          <h2>{{peoples[3].gender}}</h2>
+          <p>{{peoples[3].height}} / {{peoples[3].mass}}</p>
+        </ion-item>
+        <ion-item>
+          <h1>{{peoples[4].name}}</h1>
+          <h2>{{peoples[4].gender}}</h2>
+          <p>{{peoples[4].height}} / {{peoples[4].mass}}</p>
+        </ion-item>
+        <ion-item>
+          <h1>{{peoples[5].name}}</h1>
+          <h2>{{peoples[5].gender}}</h2>
+          <p>{{peoples[5].height}} / {{peoples[5].mass}}</p>
+        </ion-item>
+        <ion-item>
+          <h1>{{peoples[6].name}}</h1>
+          <h2>{{peoples[6].gender}}</h2>
+          <p>{{peoples[6].height}} / {{peoples[6].mass}}</p>
+        </ion-item>
+        <ion-item>
+          <h1>{{peoples[7].name}}</h1>
+          <h2>{{peoples[7].gender}}</h2>
+          <p>{{peoples[7].height}} / {{peoples[7].mass}}</p>
+        </ion-item>
+        <ion-item>
+          <h1>{{peoples[8].name}}</h1>
+          <h2>{{peoples[8].gender}}</h2>
+          <p>{{peoples[8].height}} / {{peoples[8].mass}}</p>
+        </ion-item>
+        <ion-item>
+          <h1>{{peoples[9].name}}</h1>
+          <h2>{{peoples[9].gender}}</h2>
+          <p>{{peoples[9].height}} / {{peoples[9].mass}}</p>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
