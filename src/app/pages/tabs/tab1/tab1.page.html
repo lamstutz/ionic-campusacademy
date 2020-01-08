@@ -24,11 +24,12 @@
         {{elt }} : <app-my-component></app-my-component>
       </div>
       <ion-list>
-        <ion-item *ngFor="let people of peoples">
+        <app-people *ngFor="let people of peoples" [people]="people"></app-people>
+        <!-- <ion-item *ngFor="let people of peoples">
           <h1 appYellow="blue">{{people.name | appCamelCase}}</h1>
           <h2 [ngClass]="{'green-text':people.gender === 'female','blue-text':people.gender === 'male','grey-text':people.gender === 'n/a'}">{{people.gender}}</h2>
           <p>{{people.height}} / {{people.mass}}</p>
-        </ion-item>
+        </ion-item> -->
       </ion-list>
     </ion-card-content>
   </ion-card>

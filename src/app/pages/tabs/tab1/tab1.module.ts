@@ -1,13 +1,12 @@
+import { ComponentsModule } from './../../../components/components.module';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab1Page } from './tab1.page';
-import { MyComponentComponent } from '../../../components/my-component/my-component.component';
 import { YellowDirective } from '../../../directives/yellow.directive';
-import { CamelCasePipe } from '../../../pipes/camelCase.pipe';
-import { PipeModule } from 'src/app/pipes/pipe.module';
+import { PipeModule } from '../../../pipes/pipe.module';
 
 @NgModule({
   imports: [
@@ -15,8 +14,9 @@ import { PipeModule } from 'src/app/pipes/pipe.module';
     CommonModule,
     FormsModule,
     RouterModule.forChild([{ path: '', component: Tab1Page }]),
-    PipeModule
+    PipeModule,
+    ComponentsModule
   ],
-  declarations: [Tab1Page, MyComponentComponent, YellowDirective]
+  declarations: [Tab1Page, YellowDirective]
 })
 export class Tab1PageModule { }
