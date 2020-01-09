@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content>
-  <p>value:{{value}}</p>
+  <p>value:{{value$ | async}}</p>
   <button (click)="increment()">+</button>
   <br>
   <button (click)="decrement()">-</button>

@@ -1,21 +1,24 @@
 import { Injectable } from "@angular/core";
+import { Subject, BehaviorSubject, ReplaySubject } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
 })
 export class CountService {
 
-    count = 0;
+    count$ = new BehaviorSubject(0);
+
+
 
     constructor() {
 
     }
 
 
-    decrement(): number {
-        return --this.count;
+    decrement(): void {
+        this.count$.next(this.count$.value - 1);
     }
-    increment(): number {
-        return ++this.count;
+    increment(): void {
+        this.count$.next(this.count$.getValue() + 1);
     }
 }
