@@ -26,12 +26,13 @@ export class Tab1Page implements OnInit {
       this.peoplesService.getAll2()
     ])
       .then(this.concatPeoples)
-      .then(this.peoplesToDetails)
+      .then(peoples => this.peoplesToDetails(peoples))
       .then((peoplesDetail: Array<any>) => {
         this.peoples = peoplesDetail;
       })
-      .catch(err => {
-        console.error(err);
+      .catch(console.error)
+      .finally(() => {
+        console.log('FINALLY');
       });
 
     console.log('ngOnInit END');
