@@ -86,7 +86,10 @@ export class PeoplesService {
       eye_color: 'red',
       birth_year: 'unknown',
       gender: 'n/a'
-    },
+    }
+  ];
+
+  private peoples2: People[] = [
     {
       name: 'Biggs Darklighter',
       height: '183',
@@ -109,9 +112,23 @@ export class PeoplesService {
     }
   ];
 
+
   constructor() { }
 
-  getAll(): Array<People> {
-    return this.peoples;
+  getAll(): Promise<Array<People>> {
+    // return this.peoples;
+    return Promise.resolve(this.peoples);
+
+  }
+
+  getAll2(): Promise<Array<People>> {
+    // return this.peoples;
+    return Promise.resolve(this.peoples2);
+
+  }
+
+  getDetail(people: People): Promise<any> {
+    const { name, gender } = people;
+    return Promise.resolve({ name, gender });
   }
 }

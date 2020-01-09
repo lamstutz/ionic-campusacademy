@@ -12,11 +12,11 @@ export class PeopleComponent implements OnInit {
   people: People;
 
   constructor() {
-    console.log('constructor people : ', this.people);
+    // console.log('constructor people : ', this.people);
   }
 
   ngOnInit() {
-    console.log('ngOnInit people : ', this.people);
+    // console.log('ngOnInit people : ', this.people);
 
   }
 
