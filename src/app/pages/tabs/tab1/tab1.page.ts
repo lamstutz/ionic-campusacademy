@@ -96,4 +96,9 @@ export class Tab1Page implements OnInit, OnDestroy {
   decrement() {
     this.countService.decrement();
   }
+
+  getIdFromUrl(peopleUrl: string): string {
+    const peopleUrlSplitted = peopleUrl.split('/');
+    return peopleUrlSplitted[peopleUrlSplitted.length - 2];
+  }
 }

@@ -24,7 +24,7 @@
         {{elt }} : <app-my-component></app-my-component>
       </div>
       <ion-list>
-        <app-people *ngFor="let people of peoples" [routerLink]="['detail','1']" [people]="people"></app-people>
+        <app-people *ngFor="let people of peoples" [routerLink]="['detail',getIdFromUrl(people.url)]" [people]="people"></app-people>
         <!-- <ion-item *ngFor="let people of peoples">
           <h1 appYellow="blue">{{people.name | appCamelCase}}</h1>
           <h2 [ngClass]="{'green-text':people.gender === 'female','blue-text':people.gender === 'male','grey-text':people.gender === 'n/a'}">{{people.gender}}</h2>
