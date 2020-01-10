@@ -26,8 +26,8 @@ export class PeoplesService {
 
   }
 
-  getDetail(people: People): Promise<any> {
-    const { name, gender } = people;
-    return Promise.resolve({ name, gender });
+  getDetail(peopleId: string): Observable<People> {
+    const url = `${environment.swapi.baseUrl}${environment.swapi.paths.people}${peopleId}`;
+    return this.http.get(url) as Observable<People>;
   }
 }
