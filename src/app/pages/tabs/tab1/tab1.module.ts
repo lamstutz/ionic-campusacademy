@@ -13,7 +13,10 @@ import { PipeModule } from '../../../pipes/pipe.module';
     IonicModule,
     CommonModule,
     FormsModule,
-    RouterModule.forChild([{ path: '', component: Tab1Page }]),
+    RouterModule.forChild([{
+      path: '',
+      component: Tab1Page,
+    }]),
     PipeModule,
     ComponentsModule
   ],

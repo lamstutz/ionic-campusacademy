@@ -8,9 +8,7 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  get value() {
-    return this.countService.count;
-  }
+
 
   constructor(private countService: CountService) { }
 
